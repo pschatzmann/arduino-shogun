@@ -2,7 +2,7 @@
  *
  * Authors: Viktor Gal
  */
-
+#ifndef ARDUINO
 #include <shogun/io/serialization/BitserySerializer.h>
 #include <shogun/io/serialization/BitseryVisitor.h>
 #include <shogun/io/ShogunErrc.h>
@@ -146,3 +146,4 @@ void BitserySerializer::write(const shared_ptr<SGObject>& object) noexcept(false
  	BitseryWriterVisitor<BitserySer> writer_visitor(serializer);
  	write_object(serializer, addressof(writer_visitor), object);
 }
+#endif

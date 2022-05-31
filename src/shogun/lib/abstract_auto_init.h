@@ -7,8 +7,11 @@
 #ifndef SHOGUN_ABSTRACT_AUTO_INIT_H
 #define SHOGUN_ABSTRACT_AUTO_INIT_H
 
+#ifdef ARDUINO_STRING_VIEW
+#include "arduino/string_view.h"
+#else
 #include <string_view>
-
+#endif
 namespace shogun
 {
 	class Any;

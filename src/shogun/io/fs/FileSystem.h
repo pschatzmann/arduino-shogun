@@ -16,7 +16,11 @@
 #include <shogun/base/ShogunEnv.h>
 #include <shogun/base/macros.h>
 #include <shogun/io/fs/FileSystemRegistry.h>
+#ifdef ARDUINO_STRING_VIEW
+#include "arduino/string_view.h"
+#else
 #include <string_view>
+#endif
 
 namespace shogun
 {

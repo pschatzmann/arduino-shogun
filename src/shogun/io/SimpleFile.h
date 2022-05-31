@@ -7,7 +7,7 @@
 
 #ifndef __SIMPLEFILE_H__
 #define __SIMPLEFILE_H__
-
+#if !defined(ARDUINO) 
 #include <shogun/lib/config.h>
 
 #include <shogun/lib/memory.h>
@@ -16,7 +16,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#ifndef _WIN32
+#if !defined(_WIN32) 
 #include <sys/mman.h>
 #endif
 
@@ -229,4 +229,5 @@ template <class T> class SimpleFile : public SGObject
 		char* line_buffer;
 };
 }
+#endif
 #endif

@@ -47,7 +47,9 @@
 #include <shogun/lib/Time.h>
 #include <shogun/mathematics/Math.h>
 
-#ifdef WIN32
+#if defined(ARDUINO) 
+#include <unistd.h>
+#elif defined(WIN32)
 #include <windows.h>
 #else
 #include <sys/ioctl.h>

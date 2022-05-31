@@ -76,3 +76,13 @@ Note that some folders are submodules that can be checked out with
 Shogun is distributed under [BSD 3-clause license](doc/license/LICENSE.md), with
 optional GPL3 components.
 See [doc/licenses](doc/license) for details.
+
+
+## ARDUINO
+----------
+
+I was investigating what is needed to use Shogun in Arduino (e.g. on an ESP32 or RP2040). Conclusions so far
+
+- Eigen needs to be made available
+- rxpp needs to be made available
+- The library depends heavily on rtti which is deactivated in Arduino. This is currently one of the major blocking factors.

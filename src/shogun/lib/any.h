@@ -20,12 +20,15 @@
 #include <typeindex>
 #include <typeinfo>
 #include <unordered_map>
+#if HAVE_STD_VARIANT
 #include <variant>
+#endif
 #include <vector>
 
 #include <shogun/base/base_types.h>
 #include <shogun/util/converters.h>
 #include <shogun/util/traits.h>
+
 namespace shogun
 {
 

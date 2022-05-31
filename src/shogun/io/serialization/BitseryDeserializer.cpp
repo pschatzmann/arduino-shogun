@@ -3,6 +3,7 @@
  * Authors: Viktor Gal
  */
 
+#ifndef ARDUINO
 #include <shogun/io/serialization/BitseryDeserializer.h>
 #include <shogun/io/serialization/BitseryVisitor.h>
 #include <shogun/io/ShogunErrc.h>
@@ -191,3 +192,5 @@ void BitseryDeserializer::read(std::shared_ptr<SGObject> _this)
 	BitseryReaderVisitor<BitseryDeser> reader_visitor(deser);
 	object_reader(deser, addressof(reader_visitor), _this);
 }
+
+#endif

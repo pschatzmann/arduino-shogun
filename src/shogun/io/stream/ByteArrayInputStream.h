@@ -9,7 +9,11 @@
 #include <shogun/io/fs/FileSystem.h>
 #include <shogun/io/stream/InputStream.h>
 
+#ifdef ARDUINO_STRING_VIEW
+#include "arduino/string_view.h"
+#else
 #include <string_view>
+#endif
 
 namespace shogun
 {

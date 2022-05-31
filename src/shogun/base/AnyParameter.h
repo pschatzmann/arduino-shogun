@@ -13,7 +13,11 @@
 
 #include <list>
 #include <memory>
+#ifdef ARDUINO_STRING_VIEW
+#include "arduino/string_view.h"
+#else
 #include <string_view>
+#endif
 #include <optional>
 
 namespace shogun

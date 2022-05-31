@@ -2,6 +2,7 @@
  *
  * Authors: Sergey Lisitsyn, Viktor Gal
  */
+#ifndef ARDUINO
 
 #include <memory>
 #include <stack>
@@ -343,3 +344,6 @@ void JsonSerializer::write(const shared_ptr<SGObject>& object) noexcept(false)
 		make_unique<JSONWriterVisitor<JsonWriter>>(writer);
 	write_object(writer, writer_visitor.get(), object);
 }
+
+
+#endif

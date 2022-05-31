@@ -9,6 +9,7 @@
 
 #ifndef __SGIO_H__
 #define __SGIO_H__
+#ifndef ARDUINO
 
 #include <shogun/base/ShogunEnv.h>
 #include <shogun/lib/common.h>
@@ -410,3 +411,5 @@ namespace shogun
 #endif // SWIG
 } // namespace shogun
 #endif // __SGIO_H__
+
+#endif

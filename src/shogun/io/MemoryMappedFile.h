@@ -7,6 +7,7 @@
 
 #ifndef __MEMORYMAPPEDFILE_H__
 #define __MEMORYMAPPEDFILE_H__
+#if !defined(ARDUINO) 
 
 #include <shogun/lib/config.h>
 
@@ -15,7 +16,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#ifndef _MSC_VER
+#if !defined(_MSC_VER) 
 #include <sys/mman.h>
 #include <unistd.h>
 #endif
@@ -330,4 +331,5 @@ template <class T> class MemoryMappedFile : public SGObject
 		uint64_t last_written_byte;
 };
 }
+#endif
 #endif

@@ -2,6 +2,7 @@
  *
  * Authors: Sergey Lisitsyn, Viktor Gal
  */
+#ifndef ARDUINO
 
 #include <memory>
 #include <stack>
@@ -407,3 +408,5 @@ void JsonDeserializer::read(std::shared_ptr<SGObject> _this)
 	object_reader(dynamic_cast<Document::ValueType*>(&reader),
 		reader_visitor.get(), _this);
 }
+
+#endif

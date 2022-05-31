@@ -6,6 +6,7 @@
  *          Saurabh Goyal
  */
 
+#ifndef ARDUINO
 #define SPDLOG_NO_NAME
 #define SPDLOG_NO_THREAD_ID
 #define SPDLOG_DISABLE_DEFAULT_LOGGER
@@ -278,3 +279,5 @@ void SGIO::disable_syntax_highlighting()
 	syntax_highlight = false;
 	io_sink->set_formatter(std::make_unique<Formatter>(syntax_highlight));
 }
+
+#endif

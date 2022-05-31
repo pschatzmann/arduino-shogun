@@ -2,7 +2,11 @@
 #define SHOGUN_PATH_H
 
 #include <string>
+#ifdef ARDUINO_STRING_VIEW
+#include "arduino/string_view.h"
+#else
 #include <string_view>
+#endif
 
 namespace shogun
 {

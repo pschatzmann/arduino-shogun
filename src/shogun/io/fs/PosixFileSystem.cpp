@@ -1,4 +1,5 @@
 #ifndef _MSC_VER
+#if !defined(ARDUINO) 
 
 #include <iostream>
 #include <dirent.h>
@@ -249,4 +250,5 @@ error_condition PosixFileSystem::get_paths(const string& pattern,
 REGISTER_FILE_SYSTEM("", PosixFileSystem);
 REGISTER_FILE_SYSTEM("file", LocalPosixFileSystem);
 
+#endif
 #endif
